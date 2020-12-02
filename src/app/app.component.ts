@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.spaceManagementService.isLoader.subscribe(response => {
-      this.loader = response;
+      setTimeout(() => {
+        this.loader = response;
+      });
     });
   }
 }

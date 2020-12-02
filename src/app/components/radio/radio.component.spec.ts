@@ -22,4 +22,16 @@ describe('RadioComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should test onRadioChange', () => {
+    const event = {
+      currentTarget: {
+        name: 'years',
+        value: 2006
+      }
+    };
+    const emitSpy = spyOn(component.onFilterChange, 'emit');
+    component.onRadioChange(event);
+    expect(emitSpy).toHaveBeenCalled();
+  });
 });

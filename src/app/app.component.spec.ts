@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { TestBed } from '@angular/core/testing';
+import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { LoaderComponent } from './components/loader/loader.component';
@@ -9,6 +9,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { SpaceManagementService } from './services/space-management.service';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -24,17 +25,20 @@ describe('AppComponent', () => {
       ],
       providers: [SpaceManagementService]
     }).compileComponents();
+
+    const fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'spacex-program'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('spacex-program');
-  });
+  it('should test ngOnInit the app', fakeAsync(() => {
+    component.ngOnInit();
+    tick(100);
+    expect(component.loader).toBeDefined();
+  }));
+
 });
