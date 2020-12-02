@@ -1,0 +1,6 @@
+<div class="row mt-1 mr-0 ml-0">
+    <div *ngFor="let item of radioArray; let i = index" class="year-buttons mt-1">
+        <input type="radio" id="{{item.id}}" value="{{item.value}}" (change)="onRadioChange($event)" name="{{item.name}}" />
+        <label for="{{item.id}}">{{item.value}}</label>
+    </div>
+</div>

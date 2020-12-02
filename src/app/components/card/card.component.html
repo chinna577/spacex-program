@@ -1,0 +1,11 @@
+
+    <div class="bg-light mr-1 mb-1 content-box">
+        <div class="text-center"><img class="p-2" src="https://greatscience.com/sites/default/files/rocket-banner_1.jpg" alt="image_url" height="200"/></div>
+        <div class="p-4">
+            <div class="font-weight-bolder misson-name">{{spaceItem.mission_name}} #{{spaceItem.flight_number}}</div>
+            <div><span class="font-weight-bolder">Mission Ids:</span>&nbsp;<span class="space-item">{{spaceItem.mission_id}}</span></div>
+            <div><span class="font-weight-bolder">Launch Year:</span>&nbsp;<span class="space-item">{{spaceItem.launch_year}}</span></div>
+            <div><span class="font-weight-bolder">Successful Launch:</span>&nbsp;<span class="successful-launch space-item">{{spaceItem.launch_success}}</span></div>
+            <div><span class="font-weight-bolder">Successful Landing:</span>&nbsp;<span class="successful-land space-item">{{spaceItem.rocket.first_stage.cores[0].land_success}}</span></div>
+        </div>
+    </div>

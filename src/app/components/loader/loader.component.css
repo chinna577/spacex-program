@@ -1,0 +1,10 @@
+.modal-content {
+    padding: 2rem;
+    display: block;
+}
+.modal-dialog {
+    max-width: fit-content;
+}
+.loader-modal {
+    margin: auto;
+}

@@ -1,0 +1,23 @@
+.misson-name {
+    font-size: x-large;
+    margin-bottom: 5px;
+    color: rgb(118, 130, 171);
+}
+.content-box {
+    width: 315px;
+    height: 440px;
+    border-radius: 4px;
+}
+.successful-launch,
+.successful-land {
+    text-transform: capitalize;
+}
+.space-item {
+    color: grey;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    .content-box {
+        width: 450px;
+    }
+}

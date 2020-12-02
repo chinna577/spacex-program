@@ -1,0 +1,29 @@
+.year-buttons label,
+.year-buttons input {
+  background-color: lightgreen;
+  border-radius: 4px;
+}
+
+.year-buttons input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.year-buttons input[type="radio"]:checked+label {
+  background: #4CAF50;
+}
+
+.year-buttons label {
+  padding: 5px;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+}
+
+.year-buttons label:hover {
+  background: lightgreen;
+}
+
+.year-buttons {
+  width: 50%;
+}
