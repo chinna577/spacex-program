@@ -1,11 +1,18 @@
 
-    <div class="bg-light mr-1 mb-1 content-box">
-        <div class="text-center"><img class="p-2" src="https://greatscience.com/sites/default/files/rocket-banner_1.jpg" alt="image_url" height="200"/></div>
-        <div class="p-4">
-            <div class="font-weight-bolder misson-name">{{spaceItem.mission_name}} #{{spaceItem.flight_number}}</div>
-            <div><span class="font-weight-bolder">Mission Ids:</span>&nbsp;<span class="space-item">{{spaceItem.mission_id}}</span></div>
-            <div><span class="font-weight-bolder">Launch Year:</span>&nbsp;<span class="space-item">{{spaceItem.launch_year}}</span></div>
-            <div><span class="font-weight-bolder">Successful Launch:</span>&nbsp;<span class="successful-launch space-item">{{spaceItem.launch_success}}</span></div>
-            <div><span class="font-weight-bolder">Successful Landing:</span>&nbsp;<span class="successful-land space-item">{{spaceItem.rocket.first_stage.cores[0].land_success}}</span></div>
+    <div class="bg-light-grey margin-right-5 margin-bottom-5 content-box">
+        <div class="text-center"><img class="rocket-image" src="https://greatscience.com/sites/default/files/rocket-banner_1.jpg" alt="image_url"/></div>
+        <div class="padding-1-5">
+            <div class="font-weight-bolder misson-name" title="{{spaceItem.mission_name}} #{{spaceItem.flight_number}}">{{spaceItem.mission_name}} #{{spaceItem.flight_number}}</div>
+            <div><span class="font-weight-bolder">Mission Ids:</span>
+            <ul class="mission-list" *ngIf="spaceItem.mission_id.length > 0; else emptyBlock">
+                <li class="space-item" *ngFor="let missionId of spaceItem.mission_id">
+                    {{missionId}}
+                </li>
+            </ul>
+            <ng-template #emptyBlock><span class="space-item"> Null</span></ng-template>
+            </div>
+            <div><span class="font-weight-bolder">Launch Year:</span>&nbsp;<span class="space-item">{{spaceItem.launch_year ? spaceItem.launch_year : 'Null'}}</span></div>
+            <div><span class="font-weight-bolder">Successful Launch:</span>&nbsp;<span class="successful-launch space-item">{{(spaceItem.launch_success === '' || spaceItem.launch_success === null) ? 'Null' : spaceItem.launch_success}}</span></div>
+            <div><span class="font-weight-bolder">Successful Landing:</span>&nbsp;<span class="successful-land space-item">{{(spaceItem.rocket.first_stage.cores[0].land_success === '' || spaceItem.rocket.first_stage.cores[0].land_success === null) ? 'Null' : spaceItem.rocket.first_stage.cores[0].land_success}}</span></div>
         </div>
     </div>

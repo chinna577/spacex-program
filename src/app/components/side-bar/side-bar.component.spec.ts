@@ -29,36 +29,36 @@ describe('SideBarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should test onRadioChange method when years is selected', () => {
+  it('should test radioChange method when years is selected', () => {
     const event = {
       currentTarget: {
         name: 'years',
         value: '2007'
       }
     };
-    component.onRadioChange(event);
+    component.radioChange(event);
     expect(component.selectedFilters.length).toBe(1);
   });
 
-  it('should test onRadioChange method when successful launch is selected', () => {
+  it('should test radioChange method when successful launch is selected', () => {
     const event = {
       currentTarget: {
         name: 'successful-launches',
         value: 'true'
       }
     };
-    component.onRadioChange(event);
+    component.radioChange(event);
     expect(component.selectedFilters.length).toBe(1);
   });
 
-  it('should test onRadioChange method when successful land is selected', () => {
+  it('should test radioChange method when successful land is selected', () => {
     const event = {
       currentTarget: {
         name: 'successful-landings',
         value: 'true'
       }
     };
-    component.onRadioChange(event);
+    component.radioChange(event);
     expect(component.selectedFilters.length).toBe(1);
   });
 });

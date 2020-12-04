@@ -26,7 +26,7 @@ export class SideBarComponent implements OnInit {
         id: 'year_' + year,
         value: year.toString(),
         name: 'years'
-      }
+      };
       this.availableYears.push(yearObj);
     }
     this.successfulLaunches = [
@@ -55,14 +55,14 @@ export class SideBarComponent implements OnInit {
     ];
   }
 
-  onRadioChange(event) {
+  radioChange(event): void {
     const value = event.currentTarget.value.toLowerCase();
     const name = event.currentTarget.name.toLowerCase();
     const selectedObj = {
       name,
       value
-    }
-    let year ='';
+    };
+    let year = '';
     let successLaunch = '';
     let successLand = '';
     this.selectedFilters.push(selectedObj);

@@ -19,10 +19,10 @@ describe('CardComponent', () => {
     component.spaceItem = {
       mission_name: 'Mission to Moon',
       flight_number: 1,
-      mission_id: 'FEWCRT',
+      mission_id: ['FEWCRT'],
       launch_year: 2006,
       launch_success: true,
-      rocket: { 
+      rocket: {
         first_stage: {
           cores: [
             {
@@ -31,7 +31,7 @@ describe('CardComponent', () => {
           ]
         }
       }
-    }
+    };
     fixture.detectChanges();
   });
 

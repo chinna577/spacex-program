@@ -1,13 +1,3 @@
-.misson-name {
-    font-size: x-large;
-    margin-bottom: 5px;
-    color: rgb(118, 130, 171);
-}
-.content-box {
-    width: 315px;
-    height: 440px;
-    border-radius: 4px;
-}
 .successful-launch,
 .successful-land {
     text-transform: capitalize;
@@ -15,9 +5,72 @@
 .space-item {
     color: grey;
 }
+.margin-right-5{
+    margin-right: 0.25rem;
+}
+.margin-bottom-5 {
+    margin-bottom: 0.25rem;
+}
+.padding-1-5 {
+    padding: 1.5rem;
+}
+.mission-list {
+    display: table-cell;
+}
 
-@media (min-width: 300px) and (max-width: 600px) {
+/* Tablet View CSS */
+@media (min-width: 700px) and (max-width: 1024px) {
     .content-box {
-        width: 450px;
+        height: 26rem;
+    }
+    .misson-name {
+        font-size: large;
+        margin-bottom: 5px;
+        color: rgb(118, 130, 171);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .rocket-image {
+        width: 96%;
+        padding-top: 5px;
+    }
+}
+
+/* Desktop View CSS */
+@media (min-width: 1025px) {
+    .misson-name {
+        font-size: large;
+        margin-bottom: 5px;
+        color: rgb(118, 130, 171);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .content-box {
+        height: 25rem;
+    }
+    .rocket-image {
+        width: 96%;
+        padding-top: 5px;
+    }
+}
+
+/* Mobile View CSS */
+@media (max-width: 699px) {
+    .misson-name {
+        font-size: large;
+        margin-bottom: 5px;
+        color: rgb(118, 130, 171);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .content-box {
+        height: auto;
+    }
+    .rocket-image {
+        width: 96%;
+        padding-top: 5px;
     }
 }

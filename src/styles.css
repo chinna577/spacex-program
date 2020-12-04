@@ -1,4 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.bg-light-grey {
+    background-color: white;
+}
+.text-center {
+    text-align: center;
+}
+.grey-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+.bg-grey {
+    background-color: rgb(242, 242, 242);
+}
+.font-weight-bolder {
+    font-weight: bold;
+}
+.row-display {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.padding-5 {
+    padding: 0.5rem;
+}
+.margin-right0 {
+    margin-right: 0;
+}
+.margin-left0 {
+    margin-left: 0;
+}
+.display-flex {
+    display: flex;
+}
+.margin-top-1 {
+    margin-top: 0.25rem;
+}
+
+/* Mobile View CSS */
+@media (max-width: 699px) {
+    .display-flex {
+        display: block;
+    }
+}
+
+/* Tablet View CSS */
+@media (min-width: 700px) and (max-width: 1024px) {
+    .row-display {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .padding-5 {
+        padding: 0.5rem;
+    }
+    .margin-right0 {
+        margin-right: 0;
+    }
+    .margin-left0 {
+        margin-left: 0;
+    }
+    .display-flex {
+        display: flex;
+    }
+    .margin-top-1 {
+        margin-top: 0.25rem;
+    }
 }

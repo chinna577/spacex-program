@@ -6,22 +6,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## CI Build and Deployment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`spacex-program-ci.yml` is created under .github/workflows for CI suite.
 
-## Build
+1. CI checks include isntalling package.json , running test cases and checking for Lint Errors.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Once the CI suite is passed, deployment process gets triggered automatically in Heroku. It is configured in such a way if it   fails deployment doesn't gets triggered.
 
-## Running unit tests
+## Responsive Behaviour
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Pure CSS is used to develop the responsive application.
 
-## Running end-to-end tests
+1. Screen size until 699px is considered as Mobile View (Full-Screen View one card per row).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+2. Screen size from 700px to 1024px is considered as Tablet View (Two cards per row).
 
-## Further help
+3. Screen size greater than 1025px is considered as Desktop View (Four cards per row).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Application Behaviour
+
+1. For images, links that are in the API response are not accessible. So, is the reason I have placed an image by myself (sample one referring to Google).
+
+2. Filters are group of radio buttons (Year as a Group, Landing as a Group, Launching as a Grouup). Only one can be selected in a single group. As the API is accepting only single value for each group I have made them as Radio buttons.

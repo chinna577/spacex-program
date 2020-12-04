@@ -1,0 +1,20 @@
+/* Tablet View CSS */
+@media (min-width: 700px) and (max-width: 1024px) {
+    .card-width {
+        width: 50%;
+    }
+}
+
+/* Desktop View CSS */
+@media (min-width: 1025px) {
+    .card-width {
+        width: 25%;
+    }
+}
+
+/* Mobile View CSS */
+@media (max-width: 699px) {
+    .card-width {
+        width: 100%;
+    }
+}

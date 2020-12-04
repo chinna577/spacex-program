@@ -10,8 +10,8 @@ export class SpaceManagementService {
   totalSpaceData = new BehaviorSubject<any>([]);
   isLoader = new BehaviorSubject<boolean>(false);
 
-  public getCompleteSpaceData() {
-    const endUrl = 'https://api.spaceXdata.com/v3/launches?limit=100'; 
+  public getCompleteSpaceData(): void {
+    const endUrl = 'https://api.spaceXdata.com/v3/launches?limit=100';
     this.isLoader.next(true);
     this.http.get(endUrl).subscribe((res) => {
       this.totalSpaceData.next(res);
@@ -23,8 +23,8 @@ export class SpaceManagementService {
       });
   }
 
-  public getSpaceDataByFilter(land_success?:string, launch_success?: string, launch_year?: string) {
-    const endUrl = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=' + launch_success + '&land_success=' + land_success + '&launch_year=' + launch_year;
+  public getSpaceDataByFilter(landSuccess?: string, launchSuccess?: string, launchYear?: string): void {
+    const endUrl = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=' + launchSuccess + '&land_success=' + landSuccess + '&launch_year=' + launchYear;
     this.isLoader.next(true);
     this.http.get(endUrl).subscribe((res) => {
         this.totalSpaceData.next(res);

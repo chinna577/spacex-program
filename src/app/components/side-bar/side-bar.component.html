@@ -1,11 +1,11 @@
-<div class="bg-light p-2 filters-content">
-    <h4>Filters</h4>
+<div class="bg-light-grey padding-5 filters-content">
+    <span class="filter-header">Filters</span>
     <div class="text-center">
-        <p class="border-bottom">Launch Year</p>
-        <app-radio [radioArray]="availableYears" (onFilterChange)="onRadioChange($event)"></app-radio>
-        <p class="border-bottom">Successful Launch</p>
-        <app-radio [radioArray]="successfulLaunches" (onFilterChange)="onRadioChange($event)"></app-radio>
-        <p class="border-bottom">Successful Landing</p>
-        <app-radio [radioArray]="successfulLandings" (onFilterChange)="onRadioChange($event)"></app-radio>
+        <p class="grey-bottom">Launch Year</p>
+        <app-radio [radioArray]="availableYears" (filterChange)="radioChange($event)"></app-radio>
+        <p class="grey-bottom">Successful Launch</p>
+        <app-radio [radioArray]="successfulLaunches" (filterChange)="radioChange($event)"></app-radio>
+        <p class="grey-bottom">Successful Landing</p>
+        <app-radio [radioArray]="successfulLandings" (filterChange)="radioChange($event)"></app-radio>
     </div>
 </div>

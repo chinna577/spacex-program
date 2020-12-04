@@ -30,8 +30,8 @@ describe('RadioComponent', () => {
         value: 2006
       }
     };
-    const emitSpy = spyOn(component.onFilterChange, 'emit');
-    component.onRadioChange(event);
+    const emitSpy = spyOn(component.filterChange, 'emit');
+    component.radioChange(event);
     expect(emitSpy).toHaveBeenCalled();
   });
 });

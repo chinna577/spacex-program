@@ -7,14 +7,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class RadioComponent implements OnInit {
   @Input() radioArray: any[];
-  @Output() onFilterChange = new EventEmitter<any>();
+  @Output() filterChange = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onRadioChange(event) {
-    this.onFilterChange.emit(event);
+  radioChange(event): void {
+    this.filterChange.emit(event);
   }
 
 }
