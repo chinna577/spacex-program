@@ -6,7 +6,7 @@ body {
     font-size: 1rem;
 }
 
-.bg-light-grey {
+.bg-white {
     background-color: white;
 }
 .text-center {
@@ -15,8 +15,8 @@ body {
 .grey-bottom {
     border-bottom: 1px solid #dee2e6;
 }
-.bg-grey {
-    background-color: rgb(242, 242, 242);
+.bg-light-gray {
+    background-color: lightgray;
 }
 .font-weight-bolder {
     font-weight: bold;
