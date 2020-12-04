@@ -13,7 +13,9 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule,
+        RouterTestingModule.withRoutes([
+          {path: '', component: AppComponent}
+        ]),
         HttpClientModule
       ],
       declarations: [

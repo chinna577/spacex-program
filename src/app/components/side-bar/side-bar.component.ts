@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SpaceManagementService } from 'src/app/services/space-management.service';
 
 export interface RadioType {
@@ -16,7 +17,7 @@ export class SideBarComponent implements OnInit {
   successfulLaunches: RadioType[] = [];
   successfulLandings: RadioType[] = [];
   selectedFilters: any[] = [];
-  constructor(private spaceManagementService: SpaceManagementService) { }
+  constructor(private spaceManagementService: SpaceManagementService, private router: Router) { }
 
   ngOnInit(): void {
     let year = 2005;
@@ -74,6 +75,9 @@ export class SideBarComponent implements OnInit {
       } else if (selectedFilter.name === 'successful-landings') {
         successLand = selectedFilter.value;
       }
+    });
+    this.router.navigate(['refine'], {
+      queryParams: { year, successLand, successLaunch }
     });
     this.spaceManagementService.getSpaceDataByFilter(successLand, successLaunch, year);
   }
